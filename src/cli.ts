@@ -70,7 +70,8 @@ const pinPair = async (ip: string, mac: string) => {
     await tv.init()
     await tv.requestPin()
   } catch (err) {
-    logPinAlternatives({ ip, mac })
+    console.log(err)
+    //logPinAlternatives({ ip, mac })
     process.exit(1)
   }
 
